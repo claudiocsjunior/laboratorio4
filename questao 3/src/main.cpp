@@ -1,7 +1,10 @@
 #include <iostream>
 #include "../include/ListaCircularEncadeada.h"
 #include "../include/Fila.h"
-
+/**
+* @brief Método de inicio do projeto
+* @return 0
+*/
 using namespace std;
 int main(){
 	Fila<int> *fila = new Fila<int>;
@@ -10,6 +13,7 @@ int main(){
 	int num;
 
 	do{
+		cout << endl;
 		num = 0;
 		cout << "1 - ADICIONAR VALOR" << endl;
 		cout << "2 - REMOVER VALOR" << endl;

@@ -1,15 +1,16 @@
-/*
- * ListaCircularEncadeada.h
- *
- *  Created on: 21/05/2018
- *      Author: claudio
- */
+/**
+* @file   ListaCircularEncadeada.h
+* @brief  Classe responsável por criar uma lista encadeada 
+* @author Claudio da Cruz Silva Junior
+* @since  20/05/2018
+* @date   20/05/2018
+*/
 
-#ifndef LISTACIRCULARENCADEADA_H_
-#define LISTACIRCULARENCADEADA_H_
+#ifndef LISTACIRCULARENCADEADA_H_  /**< Verifica se a variável LISTACIRCULARENCADEADA_H_ foi definida*/
+#define LISTACIRCULARENCADEADA_H_	 /**< Define a variável LISTACIRCULARENCADEADA_H_*/
 
-#include <iostream>
-#include "../../teobaldo_tad/lista.h"
+#include <iostream> /**< Inclusão da biblioteca iostream*/
+#include "../../teobaldo_tad/lista.h" /**< Inclusão da classe lista*/
 
 using namespace std;
 
@@ -20,30 +21,77 @@ std::ostream& operator<<( std::ostream&, ListaCircularEncadeada<T> const & );
 template <typename T>
 class ListaCircularEncadeada:public ListaLigada<T> {
 public:
-	ListaCircularEncadeada();
-	virtual ~ListaCircularEncadeada();
-
-	bool IsEmpty();
+	ListaCircularEncadeada(); /**< Construtor padrão da Classe*/
+	virtual ~ListaCircularEncadeada(); /**< Destrutor da Classe*/
+	/**
+	* @brief Método que verifica se a lista está vazia
+	* @return booleano
+	*/
+	bool IsEmpty(); 
+	/**
+	* @brief Método que insere no inicio da lista circular
+	* @param[in] valor a ser adicionado
+	* @return booleano
+	*/
 	bool InsereNoInicio(T _valor);
+	/**
+	* @brief Método que insere no final da lista circular
+	* @param[in] valor a ser adicionado
+	* @return booleano
+	*/
 	bool InsereNoFinal(T _valor);
+	/**
+	* @brief Método que remove no inicio da lista circular
+	* @return booleano
+	*/
 	bool RemoveNoInicio();
+	/**
+	* @brief Método que remove no final da lista circular
+	* @return booleano
+	*/
 	bool RemoveNoFinal();
+	/**
+	* @brief Método que insere na posição fornecida da lista circular
+	* @param[in] posição a ser adicionado
+	* @param[in] valor a ser adicionado
+	* @return booleano
+	*/
 	bool InsereNaPosicao(int pos, T _valor);
+	/**
+	* @brief Método que remove na posição fornecida da lista circular
+	* @param[in] posição a ser removido
+	* @return booleano
+	*/
 	bool RemoveNaPosicao(int pos);
+	/**
+	* @brief Método que imprime o primeiro elemento
+	* @return 
+	*/
 	void printPrimeiroElemento();
+	/**
+	* @brief Método que imprime todos os objetos da lista
+	* @return booleano
+	*/
 	void Print();
 
 	friend std::ostream& operator<< <T>( std::ostream&, ListaCircularEncadeada<T> const &l);
 };
-
+/**
+* @brief Construtor padrão do objeto
+*/
 template<typename T>
 inline ListaCircularEncadeada<T>::ListaCircularEncadeada() {
 }
-
+/**
+* @brief Destrutor do objeto
+*/
 template<typename T>
 inline ListaCircularEncadeada<T>::~ListaCircularEncadeada() {
 }
-
+/**
+* @brief Método que verifica se a lista está vazia
+* @return booleano
+*/
 template<typename T>
 bool ListaCircularEncadeada<T>::IsEmpty() {
 	if(this->tamanho == 0)
@@ -51,6 +99,11 @@ bool ListaCircularEncadeada<T>::IsEmpty() {
 	return false;
 }
 
+/**
+* @brief Método que insere no inicio da lista circular
+* @param[in] valor a ser adicionado
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::InsereNoInicio(T _valor) {
 	auto novo = make_shared<Node<T>>(_valor);
@@ -65,6 +118,11 @@ bool ListaCircularEncadeada<T>::InsereNoInicio(T _valor) {
 	return true;
 }
 
+/**
+* @brief Método que insere no final da lista circular
+* @param[in] valor a ser adicionado
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::InsereNoFinal(T _valor) {
 	if (this->tamanho == 0) {
@@ -90,6 +148,10 @@ bool ListaCircularEncadeada<T>::InsereNoFinal(T _valor) {
 	return true;
 }
 
+/**
+* @brief Método que remove no inicio da lista circular
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::RemoveNoInicio() {
 	if (this->tamanho == 0) return false;
@@ -98,6 +160,10 @@ bool ListaCircularEncadeada<T>::RemoveNoInicio() {
 	return true;
 }
 
+/**
+* @brief Método que remove no final da lista circular
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::RemoveNoFinal() {
 	if (this->tamanho == 0) return false;
@@ -122,7 +188,10 @@ bool ListaCircularEncadeada<T>::RemoveNoFinal() {
 	return true;
 }
 
-
+/**
+* @brief Método que imprime todos os objetos da lista
+* @return booleano
+*/
 template <typename T>
 void ListaCircularEncadeada<T>::Print() {
 	int count = 0;
@@ -140,6 +209,12 @@ void ListaCircularEncadeada<T>::Print() {
 
 }
 
+/**
+* @brief Método que insere na posição fornecida da lista circular
+* @param[in] posição a ser adicionado
+* @param[in] valor a ser adicionado
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::InsereNaPosicao(int pos, T _valor) {
 	if (pos<0) return false;
@@ -162,6 +237,11 @@ bool ListaCircularEncadeada<T>::InsereNaPosicao(int pos, T _valor) {
 	return true;
 }
 
+/**
+* @brief Método que remove na posição fornecida da lista circular
+* @param[in] posição a ser removido
+* @return booleano
+*/
 template <typename T>
 bool ListaCircularEncadeada<T>::RemoveNaPosicao(int pos) {
 	if (pos<0) return false;
@@ -181,6 +261,10 @@ bool ListaCircularEncadeada<T>::RemoveNaPosicao(int pos) {
 	return true;
 }
 
+/**
+* @brief Método que imprime o primeiro elemento
+* @return 
+*/
 template <typename T>
 void ListaCircularEncadeada<T>::printPrimeiroElemento() {
 	if(this->tamanho > 0){

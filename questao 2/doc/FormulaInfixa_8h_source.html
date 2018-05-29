@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Calculadora Pós-Fixada: Código-Fonte de include/FormulaInfixa.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Calculadora Pós-Fixada
+   </div>
+   <div id="projectbrief">Retorna o resultado da expressão pós-fixada fornecida</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">FormulaInfixa.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="FormulaInfixa_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef _FORMULAINFIXA_H_ </span></div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="FormulaInfixa_8h.html#a1ba2a0004a03dc63c8799e11193785b1">   10</a></span>&#160;<span class="preprocessor">#define _FORMULAINFIXA_H_ </span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt; </span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string.h&gt; </span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../../teobaldo_tad/pilha.h&quot; </span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">using namespace std;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classFormulaInfixa.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFormulaInfixa.html">FormulaInfixa</a> {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> operadores; </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    Pilha&lt;string&gt; pilha; </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">double</span> valor_final; </div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classFormulaInfixa.html#a7e60251f646a68d0626e33fc27bf5636">FormulaInfixa</a>(); </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFormulaInfixa.html#a259d01ed875515d7b88ae3aa799cf3d0">~FormulaInfixa</a>(); </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="classFormulaInfixa.html#ac6dbca1d2057393d17f955f33cf1f06a">resultado</a>(<span class="keywordtype">string</span> formula);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFormulaInfixa.html#ac6c2a7b525a9bc834dcbce44d709687a">somar_valores_pilha</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFormulaInfixa.html#a4ae5144195a1445c0242798bb90f6183">subtrair_valores_pilha</a>();</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFormulaInfixa.html#a9d44f8ae247caf6ea2d82c4e8c0e70a6">multipicar_valores_pilha</a>();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFormulaInfixa.html#a9cc96091048ea16d6d009679739e9957">dividir_valores_pilha</a>();</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* QUESTAO_2_INCLUDE_FORMULAINFIXA_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="classFormulaInfixa_html_a4ae5144195a1445c0242798bb90f6183"><div class="ttname"><a href="classFormulaInfixa.html#a4ae5144195a1445c0242798bb90f6183">FormulaInfixa::subtrair_valores_pilha</a></div><div class="ttdeci">void subtrair_valores_pilha()</div><div class="ttdoc">Método para subtrair os valores da pilha. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:95</div></div>
+<div class="ttc" id="classFormulaInfixa_html_a9d44f8ae247caf6ea2d82c4e8c0e70a6"><div class="ttname"><a href="classFormulaInfixa.html#a9d44f8ae247caf6ea2d82c4e8c0e70a6">FormulaInfixa::multipicar_valores_pilha</a></div><div class="ttdeci">void multipicar_valores_pilha()</div><div class="ttdoc">Método para multiplicar os valores da pilha. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:111</div></div>
+<div class="ttc" id="classFormulaInfixa_html_a9cc96091048ea16d6d009679739e9957"><div class="ttname"><a href="classFormulaInfixa.html#a9cc96091048ea16d6d009679739e9957">FormulaInfixa::dividir_valores_pilha</a></div><div class="ttdeci">void dividir_valores_pilha()</div><div class="ttdoc">Método para dividir os valores da pilha. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:131</div></div>
+<div class="ttc" id="classFormulaInfixa_html_ac6dbca1d2057393d17f955f33cf1f06a"><div class="ttname"><a href="classFormulaInfixa.html#ac6dbca1d2057393d17f955f33cf1f06a">FormulaInfixa::resultado</a></div><div class="ttdeci">double resultado(string formula)</div><div class="ttdoc">Método que recebe a formula pós-fixada e retorna o resultado. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:32</div></div>
+<div class="ttc" id="classFormulaInfixa_html_a259d01ed875515d7b88ae3aa799cf3d0"><div class="ttname"><a href="classFormulaInfixa.html#a259d01ed875515d7b88ae3aa799cf3d0">FormulaInfixa::~FormulaInfixa</a></div><div class="ttdeci">virtual ~FormulaInfixa()</div><div class="ttdoc">Destrutor do objeto. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:25</div></div>
+<div class="ttc" id="classFormulaInfixa_html_ac6c2a7b525a9bc834dcbce44d709687a"><div class="ttname"><a href="classFormulaInfixa.html#ac6c2a7b525a9bc834dcbce44d709687a">FormulaInfixa::somar_valores_pilha</a></div><div class="ttdeci">void somar_valores_pilha()</div><div class="ttdoc">Método para somar os valores da pilha. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:80</div></div>
+<div class="ttc" id="classFormulaInfixa_html_a7e60251f646a68d0626e33fc27bf5636"><div class="ttname"><a href="classFormulaInfixa.html#a7e60251f646a68d0626e33fc27bf5636">FormulaInfixa::FormulaInfixa</a></div><div class="ttdeci">FormulaInfixa()</div><div class="ttdoc">Construtor padrão do objeto. </div><div class="ttdef"><b>Definition:</b> FormulaInfixa.cpp:17</div></div>
+<div class="ttc" id="classFormulaInfixa_html"><div class="ttname"><a href="classFormulaInfixa.html">FormulaInfixa</a></div><div class="ttdef"><b>Definition:</b> FormulaInfixa.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>PALINDROMO: Código-Fonte de include/palindromo.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PALINDROMO
+   </div>
+   <div id="projectbrief">Verifica se uma palavra ou frase é palindromo ou não</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">palindromo.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="palindromo_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef _PALINDROMO_H_  </span></div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="palindromo_8h.html#a814d1caac113cfcdf575bdbdb2234b3f">   10</a></span>&#160;<span class="preprocessor">#define _PALINDROMO_H_   </span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;pilha.h&quot; </span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string.h&gt; </span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">using namespace std;</span></div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classPalindromo.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPalindromo.html">Palindromo</a> {</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">string</span> conteudo_inverso; </div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> conteudo_recebido; </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classPalindromo.html#acf275e74fbbf20154fcd1a3a397b344e">Palindromo</a>();  </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classPalindromo.html#a82da143b8f86c9304d692b3d0337a7b5">~Palindromo</a>();  </div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPalindromo.html#a4306231b3b60486e50e4de16025d7b62">verificar</a>(<span class="keywordtype">string</span> conteudo); </div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPalindromo.html#add85f800b91fbca50d7d831c4a5a3e82">retirar_formatacao_string</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPalindromo.html#a9268073e59362bbd735169abed230a52">reverte_conteudo</a>(<a class="code" href="classPilha.html">Pilha</a> &amp;pilha);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPalindromo.html#aecc42f19581d88957406a50c68a1d2df">compara_conteudos</a>();</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* QUESTAO_1_INCLUDE_PALINDROMO_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="classPilha_html"><div class="ttname"><a href="classPilha.html">Pilha</a></div><div class="ttdef"><b>Definition:</b> pilha.h:17</div></div>
+<div class="ttc" id="classPalindromo_html_acf275e74fbbf20154fcd1a3a397b344e"><div class="ttname"><a href="classPalindromo.html#acf275e74fbbf20154fcd1a3a397b344e">Palindromo::Palindromo</a></div><div class="ttdeci">Palindromo()</div><div class="ttdoc">Construtor padrão do objeto. </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:19</div></div>
+<div class="ttc" id="classPalindromo_html_a82da143b8f86c9304d692b3d0337a7b5"><div class="ttname"><a href="classPalindromo.html#a82da143b8f86c9304d692b3d0337a7b5">Palindromo::~Palindromo</a></div><div class="ttdeci">virtual ~Palindromo()</div><div class="ttdoc">Destrutor do objeto. </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:26</div></div>
+<div class="ttc" id="classPalindromo_html_add85f800b91fbca50d7d831c4a5a3e82"><div class="ttname"><a href="classPalindromo.html#add85f800b91fbca50d7d831c4a5a3e82">Palindromo::retirar_formatacao_string</a></div><div class="ttdeci">void retirar_formatacao_string()</div><div class="ttdoc">retira formatação da string fornecida </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:44</div></div>
+<div class="ttc" id="classPalindromo_html_a9268073e59362bbd735169abed230a52"><div class="ttname"><a href="classPalindromo.html#a9268073e59362bbd735169abed230a52">Palindromo::reverte_conteudo</a></div><div class="ttdeci">void reverte_conteudo(Pilha &amp;pilha)</div><div class="ttdoc">reverte o conteudo recebendo a pilha de preenchimento </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:86</div></div>
+<div class="ttc" id="classPalindromo_html"><div class="ttname"><a href="classPalindromo.html">Palindromo</a></div><div class="ttdef"><b>Definition:</b> palindromo.h:16</div></div>
+<div class="ttc" id="classPalindromo_html_a4306231b3b60486e50e4de16025d7b62"><div class="ttname"><a href="classPalindromo.html#a4306231b3b60486e50e4de16025d7b62">Palindromo::verificar</a></div><div class="ttdeci">bool verificar(string conteudo)</div><div class="ttdoc">Método que verifica se o conteúdo é palindromo. </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:33</div></div>
+<div class="ttc" id="classPalindromo_html_aecc42f19581d88957406a50c68a1d2df"><div class="ttname"><a href="classPalindromo.html#aecc42f19581d88957406a50c68a1d2df">Palindromo::compara_conteudos</a></div><div class="ttdeci">bool compara_conteudos()</div><div class="ttdoc">Método que compara o conteudo fornecido com o conteúdo invertido. </div><div class="ttdef"><b>Definition:</b> palindromo.cpp:103</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

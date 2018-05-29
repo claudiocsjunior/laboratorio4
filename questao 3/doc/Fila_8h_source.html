@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Implementação da Fila: Código-Fonte de include/Fila.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Implementação da Fila
+   </div>
+   <div id="projectbrief">Programa de teste da fila implementada</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Fila.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Fila_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef QUESTAO_3_INCLUDE_FILA_H_  </span></div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="Fila_8h.html#a15f0a380d7d558209418795569118afc">   10</a></span>&#160;<span class="preprocessor">#define QUESTAO_3_INCLUDE_FILA_H_    </span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt; </span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;ListaCircularEncadeada.h&quot; </span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">using namespace std;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classFila.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFila.html">Fila</a> {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classListaCircularEncadeada.html">ListaCircularEncadeada&lt;T&gt;</a> *lista_circular; </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">Fila</a>(); </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classFila.html#ad7a066d10db52b8281f2859da76e8995">~Fila</a>(); </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a4aa60ce97c296517641c7df3dbe4597d">enqueue</a>(T valor);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a44fb0ddc0dad002f5891e710c202036a">dequeue</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFila.html#a11dd3fb2867aef89ea860489a56b1407">front</a>();</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a784772cf092aba632f50fb5e3d8c4191">clear</a>();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classFila.html#adb1f934a20ce7a8aafce2cdf55363063">IsEmpty</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classFila.html#ac63017d0a4ae80be2dc683778254dc02">print</a>();</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">   61</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">Fila&lt;T&gt;::Fila</a>() {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    this-&gt;lista_circular = <span class="keyword">new</span> <a class="code" href="classListaCircularEncadeada.html">ListaCircularEncadeada&lt;T&gt;</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classFila.html#ad7a066d10db52b8281f2859da76e8995">   68</a></span>&#160;<span class="keyword">inline</span> <a class="code" href="classFila.html#ad7a066d10db52b8281f2859da76e8995">Fila&lt;T&gt;::~Fila</a>() {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classFila.html#a4aa60ce97c296517641c7df3dbe4597d">   77</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a4aa60ce97c296517641c7df3dbe4597d">Fila&lt;T&gt;::enqueue</a>(T valor) {</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> lista_circular-&gt;InsereNoFinal(valor);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classFila.html#a44fb0ddc0dad002f5891e710c202036a">   86</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a44fb0ddc0dad002f5891e710c202036a">Fila&lt;T&gt;::dequeue</a>() {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> lista_circular-&gt;RemoveNoInicio();</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classFila.html#a11dd3fb2867aef89ea860489a56b1407">   95</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classFila.html#a11dd3fb2867aef89ea860489a56b1407">Fila&lt;T&gt;::front</a>() {</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> lista_circular-&gt;printPrimeiroElemento();</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classFila.html#a784772cf092aba632f50fb5e3d8c4191">  104</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classFila.html#a784772cf092aba632f50fb5e3d8c4191">Fila&lt;T&gt;::clear</a>() {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">while</span>(!lista_circular-&gt;IsEmpty())</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        lista_circular-&gt;RemoveNoInicio();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">return</span> lista_circular-&gt;IsEmpty();</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classFila.html#adb1f934a20ce7a8aafce2cdf55363063">  116</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classFila.html#adb1f934a20ce7a8aafce2cdf55363063">Fila&lt;T&gt;::IsEmpty</a>() {</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> lista_circular-&gt;IsEmpty();</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div><div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classFila.html#ac63017d0a4ae80be2dc683778254dc02">  125</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="classFila.html#ac63017d0a4ae80be2dc683778254dc02">Fila&lt;T&gt;::print</a>() {</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    lista_circular-&gt;Print();</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* QUESTAO_3_INCLUDE_FILA_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="classFila_html_af202231829ccd3849a28f61eb20e5ebc"><div class="ttname"><a href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">Fila::Fila</a></div><div class="ttdeci">Fila()</div><div class="ttdoc">Construtor padrão do objeto. </div><div class="ttdef"><b>Definition:</b> Fila.h:61</div></div>
+<div class="ttc" id="classFila_html_ad7a066d10db52b8281f2859da76e8995"><div class="ttname"><a href="classFila.html#ad7a066d10db52b8281f2859da76e8995">Fila::~Fila</a></div><div class="ttdeci">virtual ~Fila()</div><div class="ttdoc">Destrutor do objeto. </div><div class="ttdef"><b>Definition:</b> Fila.h:68</div></div>
+<div class="ttc" id="classFila_html"><div class="ttname"><a href="classFila.html">Fila</a></div><div class="ttdef"><b>Definition:</b> Fila.h:18</div></div>
+<div class="ttc" id="classFila_html_a44fb0ddc0dad002f5891e710c202036a"><div class="ttname"><a href="classFila.html#a44fb0ddc0dad002f5891e710c202036a">Fila::dequeue</a></div><div class="ttdeci">bool dequeue()</div><div class="ttdoc">Método que remove da fila. </div><div class="ttdef"><b>Definition:</b> Fila.h:86</div></div>
+<div class="ttc" id="classFila_html_a11dd3fb2867aef89ea860489a56b1407"><div class="ttname"><a href="classFila.html#a11dd3fb2867aef89ea860489a56b1407">Fila::front</a></div><div class="ttdeci">void front()</div><div class="ttdoc">Método que imprime o primeiro elemento da fila. </div><div class="ttdef"><b>Definition:</b> Fila.h:95</div></div>
+<div class="ttc" id="classFila_html_adb1f934a20ce7a8aafce2cdf55363063"><div class="ttname"><a href="classFila.html#adb1f934a20ce7a8aafce2cdf55363063">Fila::IsEmpty</a></div><div class="ttdeci">bool IsEmpty()</div><div class="ttdoc">Método que verifica se a fila está vazia. </div><div class="ttdef"><b>Definition:</b> Fila.h:116</div></div>
+<div class="ttc" id="classListaCircularEncadeada_html"><div class="ttname"><a href="classListaCircularEncadeada.html">ListaCircularEncadeada</a></div><div class="ttdef"><b>Definition:</b> ListaCircularEncadeada.h:17</div></div>
+<div class="ttc" id="classFila_html_a4aa60ce97c296517641c7df3dbe4597d"><div class="ttname"><a href="classFila.html#a4aa60ce97c296517641c7df3dbe4597d">Fila::enqueue</a></div><div class="ttdeci">bool enqueue(T valor)</div><div class="ttdoc">Método que insere na fila. </div><div class="ttdef"><b>Definition:</b> Fila.h:77</div></div>
+<div class="ttc" id="classFila_html_a784772cf092aba632f50fb5e3d8c4191"><div class="ttname"><a href="classFila.html#a784772cf092aba632f50fb5e3d8c4191">Fila::clear</a></div><div class="ttdeci">bool clear()</div><div class="ttdoc">Método que esvazia a fila. </div><div class="ttdef"><b>Definition:</b> Fila.h:104</div></div>
+<div class="ttc" id="classFila_html_ac63017d0a4ae80be2dc683778254dc02"><div class="ttname"><a href="classFila.html#ac63017d0a4ae80be2dc683778254dc02">Fila::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Método que imprime todos os elementos da fila. </div><div class="ttdef"><b>Definition:</b> Fila.h:125</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

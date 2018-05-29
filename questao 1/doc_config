@@ -1,0 +1,8 @@
+PROJECT_NAME = "PALINDROMO"
+PROJECT_BRIEF = "Verifica se uma palavra ou frase é palindromo ou não"
+OUTPUT_DIRECTORY = 
+OUTPUT_LANGUAGE = Brazilian
+RECURSIVE = YES
+GENERATE_HTML = YES
+HTML_OUTPUT = ./doc
+GENERATE_LATEX = NO

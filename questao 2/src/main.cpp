@@ -1,9 +1,12 @@
-#include <iostream>
-#include <string.h>
-#include "../include/FormulaInfixa.h"
+#include <iostream> /**< Inclusão da biblioteca iostream*/
+#include <string.h> /**< Inclusão da biblioteca string*/
+#include "../include/FormulaInfixa.h" /**< Inclusão da classe formulaInfixa*/
 
 using namespace std;
-
+/**
+* @brief Método de inicio do projeto
+* @return 0
+*/
 int main(){
 	cout << "CALCULADORA PÓS-FIXA" << endl;
 	string formula;
@@ -14,6 +17,6 @@ int main(){
 	FormulaInfixa form_inf;
 	double result = form_inf.resultado(formula);
 
-	cout << result <<endl;
+	cout << "O resultado é: " << result <<endl;
 	return 0;
 }
